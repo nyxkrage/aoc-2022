@@ -8,7 +8,7 @@ print_num:
     push rsi
     push rdx
 
-    sub rsp,1024            ; reserve 1024 bytes on stack
+    sub rsp,30            ; reserve 1024 bytes on stack
 
     mov rax,rdi
     mov rdi,rsp
@@ -19,7 +19,9 @@ print_num:
     mov rdx,rax             ; bufsize
     mov rax,1               ; SYS_WRITE
     syscall
+
+    add rsp,30
+
     pop rdx
     pop rsi
-    add rsp,1024
     ret
