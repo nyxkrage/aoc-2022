@@ -15,12 +15,9 @@ _start:
     mov r8,rax
     mov r9,rbx
     mov rcx,0
-    mov rdx,0
     mov rax,0
     mov rbx,0
     mov rdi,0
-    mov ax,0
-    mov bx,0
 score_loop:
     ; read first char
     mov dl, BYTE [rsi]
@@ -34,9 +31,6 @@ score_loop:
     inc rsi
     ; skip new line
     inc rsi
-
-
-
 
     ; add points based on shape
     add rdi,rcx
